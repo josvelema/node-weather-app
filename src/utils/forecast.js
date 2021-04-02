@@ -14,10 +14,16 @@ const forecast = (lat, lon, callback) => {
         undefined
       );
     } else {
-      callback(undefined,`The temperature at ${body.current.observation_time} is ${body.current.temperature} and feels like ${body.current.feelslike} `)
+      callback(undefined,`(timezone: UTC ${body.location.utc_offset} , ${body.location.timezone_id}) The temperature at ${body.current.observation_time}is ${body.current.temperature} and feels like ${body.current.feelslike}
+      .`)
     }
   });
 };
+
+// "timezone_id": "Europe/Paris",
+// "localtime": "2021-04-02 13:21",
+// "localtime_epoch": 1617369660,
+// "utc_offset": "2.0"
 
 
 
