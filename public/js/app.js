@@ -26,7 +26,6 @@ form.addEventListener('submit', (event) => {
       msg3.textContent = ''
     } else {
       msg1.textContent = data.location + ', ' 
-      msg3.textContent = data.forecast
       msg2.textContent = data.forecast
       
     }
